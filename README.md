@@ -144,20 +144,6 @@ export const SITE_DESCRIPTION = 'Apuntes de la materia CyM UNTREF'; // Descripci
 export const FOOTER_TEXT = 'CyM - Ciencia y Música UNTREF 2025';     // Texto que aparece en el footer
 ```
 
-### Configurar URL del sitio para Vercel
-
-Después de hacer deploy en Vercel, copia tu URL y actualiza `astro.config.mjs`:
-
-```javascript
-export default defineConfig({
-  site: 'https://tu-sitio.vercel.app', // ← Cambia esto por tu URL real
-  output: 'static', // Ya está configurado para Vercel
-  // ... resto de la configuración
-})
-```
-
-No es necesario cambiar la configuración de `output: 'static'` ya que está optimizada para Vercel.
-
 ### Añadir imágenes
 
 Pon las imágenes en la carpeta `public/` y referencialas en el frontmatter:

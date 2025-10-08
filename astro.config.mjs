@@ -22,9 +22,8 @@ import remarkRefsApa from './src/plugins/remark-refs-apa.mjs';
 
 // Esta es la exportación principal de la configuración.
 export default defineConfig({
-  // URL base de tu sitio. Es importante para el sitemap y las URLs canónicas.
-  // TODO: Los alumnos deberán cambiar esto a la URL de su propio sitio en Vercel.
-  site: 'https://ejemplo.com', // ¡Cambiar esto!
+  // URL base de tu sitio. Vercel la configurará automáticamente al hacer deploy.
+  // No necesitas cambiar esto para el template.
 
   // 'static' significa que Astro generará un sitio de archivos HTML, CSS y JS puros.
   // Es perfecto para desplegar en Vercel, Netlify, etc.
