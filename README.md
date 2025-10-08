@@ -1,4 +1,4 @@
-# Digital Obsidian Garden
+# Template de Astro-Obsidian pra blogs de Ciencia y Música 
 
 Esta es una plantilla para convertir tu bóveda de Obsidian en un sitio web público con Astro.
 
