@@ -6,24 +6,30 @@ Esta es una plantilla para convertir tu bóveda de Obsidian en un sitio web púb
 
 ## Primeros pasos
 
-### 1. El método más fácil: Deploy en Vercel
+### 1. Crear tu propio repositorio
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/musiki/cym-astro-obsidian-template)
+Haz click en "Use this template" en GitHub para crear una copia del template en tu cuenta.
 
-### 2. Pullea el repo en tu computadora local
+### 2. Deploy en Vercel
+
+Ve a [vercel.com](https://vercel.com), conecta tu cuenta de GitHub, e importa tu nuevo repositorio.
+
+### 3. Clona tu repositorio localmente
+
+Una vez configurado el repo y Vercel, clona tu propio repositorio:
 
 ```bash
-git clone https://github.com/musiki/cym-astro-obsidian-template.git
-cd cym-astro-obsidian-template
+git clone https://github.com/TU-USUARIO/TU-REPO.git
+cd TU-REPO
 ```
 
-### 3. Instala las dependencias
+### 4. Instala las dependencias
 
 ```bash
 npm install
 ```
 
-### 4. Corre el servidor de desarrollo
+### 5. Corre el servidor de desarrollo
 
 ```bash
 npm run dev
@@ -31,7 +37,7 @@ npm run dev
 
 El sitio estará en `http://localhost:4321`.
 
-### 5. Agrega tus notas en la carpeta src/content/
+### 6. Agrega tus notas en la carpeta src/content/
 
 Abre la carpeta `src/content/` como vault en Obsidian y agrega tus notas en formato Markdown.
 
