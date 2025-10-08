@@ -1,62 +1,48 @@
-# Template de Astro-Obsidian pra blogs de Ciencia y Música 
+# Template de Astro-Obsidian para blogs de Ciencia y Música 
 
 Esta es una plantilla para convertir tu bóveda de Obsidian en un sitio web público con Astro. 
 
 
 
-## paso 1 El método mas facil es deployear este repo en vercel
+## Primeros pasos
 
+### 1. El método más fácil: Deploy en Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/musiki/cym-astro-obsidian-template)
 
-## paso 2 pullea el repo en tu computadora local 
+### 2. Pullea el repo en tu computadora local
 
 ```bash
-git clone https://github//musiki/cym-astro-obsidian-template.git
+git clone https://github.com/musiki/cym-astro-obsidian-template.git
 cd cym-astro-obsidian-template
 ```
 
-## paso 3 instala las dependencias
+### 3. Instala las dependencias
 
 ```bash
 npm install
-``` 
+```
 
-## paso 4 corre el servidor de desarrollo
+### 4. Corre el servidor de desarrollo
 
 ```bash
 npm run dev
-``` 
+```
 
 El sitio estará en `http://localhost:4321`.
 
-## paso 5 agrega tus notas en la carpeta src/content/   
+### 5. Agrega tus notas en la carpeta src/content/
 
-Abrí la carpeta src/content/ como vault en Obsidian y agrega tus notas en formato Markdown.
+Abre la carpeta `src/content/` como vault en Obsidian y agrega tus notas en formato Markdown.
 
-Poné tus archivos `.md` en la carpeta `src/content/`. Podés organizarlos en subcarpetas temáticas:
-- `bibliografía/` - referencias bibliográficas
-- `conceptos/` - términos y definiciones
-- `personas/` - biografías y perfiles
-- `etc.`    
-
-> [!TIP] 
-chequea el frontmatter de tus notas. Cada nota debe tener un bloque de metadatos al inicio: ver sección [Frontmatter](#Frontmatter) mas abajo.
+> [!TIP]
+> Chequea el frontmatter de tus notas. Ver sección [Frontmatter](#Frontmatter) más abajo.
 
 ---
 
 ## ¿Qué hace esto?
 
-Esta plantilla convierte tus notas de Obsidian en un sitio web público y navegable. Soporta `[[wikilinks]]`, callouts `[!NOTE]`, búsqueda integrada, y más.
-
-## Instalación rápida (Deploy to Vercel)
-
-Haz clic en el botón "Deploy with Vercel" arriba. Esto:
-1. Crea una copia del repositorio en tu GitHub
-2. Lo publica automáticamente en Vercel
-3. Te da una URL pública donde ver tu sitio
-
-Luego solo necesitás añadir tus notas `.md` en la carpeta `src/content/`.
+Esta plantilla convierte tus notas de Obsidian en un sitio web público y navegable para Ciencia y Música. Soporta `[[wikilinks]]`, callouts `[!NOTE]`, búsqueda integrada, y más.
 
 ## Estructura de archivos y Frontmatter
 
@@ -94,8 +80,8 @@ Si quisieras editar el sitio localmente:
 ### Instalación
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
+git clone https://github.com/musiki/cym-astro-obsidian-template.git
+cd cym-astro-obsidian-template
 npm install
 npm run dev
 ```
@@ -147,7 +133,7 @@ img: "/mi-imagen.jpg"
 
 Si tenés problemas:
 - 📚 Docs de Astro: [astro.build](https://astro.build)
-- 💬 Reportar issues: [GitHub Issues](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME/issues)
+- 💬 Reportar issues: [GitHub Issues](https://github.com/musiki/cym-astro-obsidian-template/issues)
 
 ---
 desarrollado por @zztt @musiki para cym UNTREF
