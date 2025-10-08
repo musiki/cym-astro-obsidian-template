@@ -52,9 +52,9 @@ Esta plantilla convierte tus notas de Obsidian en un sitio web público y navega
 ├── public/              # Imágenes y archivos estáticos (favicon, fonts, etc.)
 ├── src/
 │   ├── components/      # Componentes reutilizables (.astro, .tsx)
-│   ├── content/         # 🦎 ESTE ES TU VAULT DE OBSIDIAN 🦖
+│   ├── content/         # Contenidos públicos
 │   │   ├── config.ts    # Configuración de content collections
-│   │   └── vault/       # Tus notas .md van aquí (borra los ejemplos)
+│   │   └── vault/       # 🦎 ABRE ESTA CARPETA COMO VAULT EN OBSIDIAN 🦖 customiza los ejemplos
 │   │       ├── bibliografía/
 │   │       ├── conceptos/
 │   │       ├── personas/
@@ -71,7 +71,7 @@ Esta plantilla convierte tus notas de Obsidian en un sitio web público y navega
 
 ### Donde van tus notas de Obsidian
 
-Pon tus archivos `.md` en la carpeta `src/content/`. Podés organizarlos en subcarpetas temáticas:
+Pon tus archivos `.md` en la carpeta `src/content/vault`. Podés organizarlos en subcarpetas temáticas:
 - `bibliografía/` - referencias bibliográficas
 - `conceptos/` - términos y definiciones
 - `personas/` - biografías y perfiles
@@ -79,18 +79,19 @@ Pon tus archivos `.md` en la carpeta `src/content/`. Podés organizarlos en subc
 
 ### Frontmatter
 
-Cada nota debe tener un bloque de metadatos al inicio:
+Cada nota debe tener un bloque de metadatos YAML al inicio:
 
 ```yaml
 ---
 title: "Título de la Nota"
 description: "Descripción corta."
 pubDate: "2025-10-08"
-img: "/mi-imagen.jpg"
+img: "/mi-imagen.jpg" o "https://url-a-imagen.jpg"
+tags: ["tag1", "tag2"]
 ---
 ```
 
-El campo `img` es opcional. Las imágenes van en la carpeta `public/`.
+El campo `img` es opcional. Las imágenes van en la carpeta `public/` o remotas.
 
 ## Desarrollo local (Opcional)
 
