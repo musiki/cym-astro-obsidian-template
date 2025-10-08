@@ -41,7 +41,7 @@ Poné tus archivos `.md` en la carpeta `src/content/`. Podés organizarlos en su
 - `etc.`    
 
 > [!TIP] 
-chequea el frontmatter de tus notas. Cada nota debe tener un bloque de metadatos al inicio: ver sección Frontmatter mas abajo.
+chequea el frontmatter de tus notas. Cada nota debe tener un bloque de metadatos al inicio: ver sección [Frontmatter](#Frontmatter) mas abajo.
 
 ---
 
