@@ -29,4 +29,9 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 		font-weight: bolder;
 		border-bottom-color: var(--accent);
 	}
+
+	/* Dark mode */
+	:global(.dark) a {
+		color: rgb(var(--black));
+	}
 </style>

@@ -22,8 +22,8 @@ const vaultCollection = defineCollection({
     pubDate: z.coerce.date().optional(),
     // `updatedDate` es la fecha de última actualización. Opcional.
     updatedDate: z.coerce.date().optional(),
-    // `img` es la imagen de portada, usada en la galería. Es opcional.
-    img: z.string().optional(),
+    // `imgHero` es la imagen de portada, usada en la galería. Es opcional.
+    imgHero: z.string().optional(),
     // `tags` es una lista de etiquetas. Es un array de strings, opcional.
     tags: z.array(z.string()).optional(),
   }),

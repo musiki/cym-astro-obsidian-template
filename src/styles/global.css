@@ -145,6 +145,57 @@ hr {
 	}
 }
 
+/* Dark mode styles */
+.dark {
+	--accent: #4f83ff;
+	--accent-dark: #1a3a9a;
+	--black: 245, 245, 245;
+	--gray: 159, 173, 189;
+	--gray-light: 71, 85, 105;
+	--gray-dark: 217, 217, 217;
+	--gray-gradient: rgba(var(--gray-light), 50%), rgb(30 30 30);
+}
+
+.dark body {
+	background: rgb(30 30 30) !important;
+	background-image: none !important;
+	color: white;
+}
+
+.dark main {
+	color: white;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+	color: rgb(var(--black));
+}
+
+.dark a {
+	color: var(--accent);
+}
+
+.dark code {
+	background-color: rgb(var(--gray-light));
+	color: rgb(var(--gray-dark));
+}
+
+.dark pre {
+	background-color: rgb(var(--gray-light));
+}
+
+.dark blockquote {
+	border-left-color: var(--accent);
+}
+
+.dark hr {
+	border-top-color: rgb(var(--gray-light));
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;
@@ -194,6 +245,111 @@ hr {
 .callout-warning { --c-accent:#d97706; --c-border:#fef3c7; --c-bg:#fffbeb; }
 .callout-danger  { --c-accent:#dc2626; --c-border:#fee2e2; --c-bg:#fef2f2; }
 .callout-quote   { --c-accent:#111827; --c-border:#e5e7eb; --c-bg:#ffffff; font-style: italic; }
+
+/* Dark mode callouts */
+.dark .callout {
+  --c-border: #374151;
+  --c-bg: #1f2937;
+  --c-accent: #f9fafb;
+}
+
+.dark .callout-note    { --c-accent:#9ca3af; --c-border:#4b5563; --c-bg:#374151; }
+.dark .callout-info    { --c-accent:#60a5fa; --c-border:#3b82f6; --c-bg:#1e3a8a; }
+.dark .callout-tip     { --c-accent:#34d399; --c-border:#059669; --c-bg:#064e3b; }
+.dark .callout-warning { --c-accent:#fbbf24; --c-border:#d97706; --c-bg:#78350f; }
+.dark .callout-danger  { --c-accent:#f87171; --c-border:#dc2626; --c-bg:#7f1d1d; }
+.dark .callout-quote   { --c-accent:#f3f4f6; --c-border:#6b7280; --c-bg:#111827; font-style: italic; color: #f3f4f6; }
+
+/* Mermaid centering and padding for all modes */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 1rem 0;
+}
+
+.dark .mermaid {
+  --mermaid-bg: rgba(0, 0, 20, 0.9);
+  --mermaid-node-bg: rgba(0, 50, 100, 0.8);
+  --mermaid-node-border: #00ffff;
+  --mermaid-edge-color: #00ff00;
+  --mermaid-label-color: #ffffff;
+  --mermaid-cluster-bg: rgba(100, 0, 100, 0.6);
+  --mermaid-cluster-border: #ff00ff;
+}
+
+.dark .mermaid svg {
+  background: transparent !important;
+}
+
+.dark .mermaid .node rect,
+.dark .mermaid .node circle,
+.dark .mermaid .node ellipse,
+.dark .mermaid .node polygon,
+.dark .mermaid .node path {
+  fill: var(--mermaid-node-bg) !important;
+  stroke: var(--mermaid-node-border) !important;
+  stroke-width: 2px !important;
+  filter: drop-shadow(0 0 6px var(--mermaid-node-border)) !important;
+}
+
+.dark .mermaid .edgePath .path {
+  stroke: var(--mermaid-edge-color) !important;
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 0 4px var(--mermaid-edge-color)) !important;
+}
+
+.dark .mermaid text {
+  fill: var(--mermaid-label-color) !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 6px var(--mermaid-label-color) !important;
+}
+
+.dark .mermaid .edgeLabel text,
+.dark .mermaid .node text,
+.dark .mermaid .cluster text,
+.dark .mermaid .flowchartLabel text,
+.dark .mermaid .pieLabel text,
+.dark .mermaid .actor text,
+.dark .mermaid .note text {
+  fill: var(--mermaid-label-color) !important;
+  text-shadow: 0 0 6px var(--mermaid-label-color) !important;
+}
+
+.dark .mermaid span,
+.dark .mermaid .label,
+.dark .mermaid .nodeLabel,
+.dark .mermaid .nodetext,
+.dark .mermaid foreignObject span,
+.dark .mermaid text.node-label,
+.dark .mermaid text.cluster-label {
+  fill: var(--mermaid-label-color) !important;
+  color: var(--mermaid-label-color) !important;
+  text-shadow: 0 0 6px var(--mermaid-label-color) !important;
+}
+
+.dark .mermaid span.edge-label,
+.dark .mermaid .edge-label,
+.dark .mermaid .edgeLabel {
+  background-color: #1f1919 !important;
+  fill: #ffffff !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.dark .mermaid [id*="edgeLabel"] rect,
+.dark .mermaid [id*="edgeLabel"] {
+  fill: #1f1919 !important;
+  stroke: none !important;
+}
+
+.dark .mermaid .cluster rect,
+.dark .mermaid .cluster polygon {
+  fill: var(--mermaid-cluster-bg) !important;
+  stroke: var(--mermaid-cluster-border) !important;
+  stroke-width: 2px !important;
+  filter: drop-shadow(0 0 8px var(--mermaid-cluster-border)) !important;
+}
 
 
 

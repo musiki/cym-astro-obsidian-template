@@ -6,13 +6,20 @@ import { FOOTER_TEXT } from '../consts';
 const today = new Date();
 ---
 <footer >
-  &copy; {today.getFullYear()} {FOOTER_TEXT}. Todos los derechos reservados.
+  &copy; {today.getFullYear()} {FOOTER_TEXT}. (CC BY-NC-SA).
 </footer>
 <style>
   footer {
-    padding: 2em 1em;
-    text-align: center;
-    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    font-size: 0.8rem;
     color: var(--gray);
+    z-index: 10;
+  }
+
+  /* Dark mode */
+  :global(.dark) footer {
+    color: rgb(var(--gray-dark));
   }
 </style>

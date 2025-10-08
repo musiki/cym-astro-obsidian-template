@@ -9,11 +9,11 @@ type Props = {
 }
 
 const { entry } = Astro.props;
-const { title, description, heroImage } = entry.data;
+const { title, description, imgHero } = entry.data;
 ---
 <a href={`/${entry.slug}`} class="card">
-  {heroImage && (
-    <img src={img} alt={`Imagen para ${title}`} width="300" height="150" />
+  {imgHero && (
+    <img src={imgHero} alt={`Imagen para ${title}`} width="300" height="150" />
   )}
   <div class="text-content">
     <h3>{title}</h3>
@@ -53,5 +53,17 @@ const { title, description, heroImage } = entry.data;
     margin: 0;
     font-size: 0.9em;
     color: var(--gray);
+  }
+
+  /* Dark mode */
+  :global(.dark) .card {
+    background: rgb(50 50 50);
+    border-color: rgb(var(--gray-light));
+  }
+  :global(.dark) .text-content h3 {
+    color: white;
+  }
+  :global(.dark) .text-content p {
+    color: rgb(var(--white));
   }
 </style>

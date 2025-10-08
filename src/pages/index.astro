@@ -10,15 +10,27 @@ import Card from '../components/Card.astro'; // Importamos el componente de tarj
 // 1. Obtenemos todas las entradas de la colección 'vault'.
 const vaultEntries = await getCollection('vault');
 
-// 2. Opcional: Ordenamos las entradas, por ejemplo, por fecha de publicación descendente.
+// 2. Encontramos la entrada de 'home' para renderizar su contenido.
+const homeEntry = vaultEntries.find(entry => entry.slug === 'home');
+const homeContent = homeEntry ? await homeEntry.render() : null;
+
+// 3. Filtramos para excluir la página "Acerca de" y la página "home" que se muestra arriba.
+const filteredEntries = vaultEntries.filter(entry => entry.slug !== 'about' && entry.slug !== 'home');
+
+// 4. Opcional: Ordenamos las entradas, por ejemplo, por fecha de publicación descendente.
 //    Las notas sin `pubDate` irán al final.
-const sortedEntries = vaultEntries.sort((a, b) => {
+const sortedEntries = filteredEntries.sort((a, b) => {
   const dateA = a.data.pubDate ?? new Date(0);
   const dateB = b.data.pubDate ?? new Date(0);
   return dateB.getTime() - dateA.getTime();
 });
 ---
 <BaseLayout title="Inicio" description="Un jardín digital de notas y conceptos.">
+  {homeContent && (
+    <section class="home-content">
+      <homeContent.Content />
+    </section>
+  )}
   <div class="gallery-grid">
     {sortedEntries.map(entry => (
       <Card entry={entry} />

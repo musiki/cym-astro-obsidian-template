@@ -1,4 +1,6 @@
-# Template de Astro-Obsidian para blogs de Ciencia y Música 
+# Template de Astro-Obsidian para blogs de Ciencia y Música
+
+![Preview](https://i.imgur.com/jOcSvw9.png)
 
 Esta es una plantilla para convertir tu bóveda de Obsidian en un sitio web público con Astro. 
 
@@ -93,7 +95,7 @@ Cada nota debe tener un bloque de metadatos YAML al inicio:
 title: "Título de la Nota"
 description: "Descripción corta."
 pubDate: "2025-10-08"
-img: "/mi-imagen.jpg" o "https://url-a-imagen.jpg"
+imgHero: "/mi-imagen.jpg" o "https://url-a-imagen.jpg"
 tags: ["tag1", "tag2"]
 ---
 ```

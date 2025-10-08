@@ -15,13 +15,13 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'vault'>['data'];
 
 // Extraemos las propiedades del frontmatter de la página actual.
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, imgHero } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<!-- El componente BaseHead se encarga de todo el SEO y metadatos básicos. -->
-		<BaseHead title={title} description={description} image={heroImage} />
+		<BaseHead title={title} description={description} image={imgHero} />
 
 		<!-- Estilos y Scripts específicos para esta plantilla -->
 
@@ -51,6 +51,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     </script>
 
 		<style>
+			body {
+				padding-bottom: 2rem; /* Space for fixed footer */
+			}
 			main {
 				width: 720px;
 				max-width: calc(100% - 2em);
@@ -94,10 +97,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				{heroImage && (
+				{imgHero && (
           <div class="hero-image">
             {/* Usamos el componente Image de Astro para optimizar la imagen. */}
-            <img width={1020} height={510} src={img} alt={`Imagen de portada para ${title}`} />
+            <img width={1020} height={510} src={imgHero} alt={`Imagen de portada para ${title}`} />
           </div>
         )}
 				<div class="prose">
