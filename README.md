@@ -150,5 +150,5 @@ Si tenés problemas:
 - 💬 Reportar issues: [GitHub Issues](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME/issues)
 
 ---
-
+desarrollado por @zztt @musiki para cym UNTREF
 Licencia: MIT
