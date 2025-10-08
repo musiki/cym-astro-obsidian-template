@@ -44,9 +44,32 @@ Abre la carpeta `src/content/` como vault en Obsidian y agrega tus notas en form
 
 Esta plantilla convierte tus notas de Obsidian en un sitio web público y navegable para Ciencia y Música. Soporta `[[wikilinks]]`, callouts `[!NOTE]`, búsqueda integrada, y más.
 
-## Estructura de archivos y Frontmatter
+## Estructura del proyecto Astro
 
-### ¿Dónde pongo mis notas?
+```
+/
+├── astro.config.mjs     # Configuración de Astro y plugins
+├── public/              # Imágenes y archivos estáticos (favicon, fonts, etc.)
+├── src/
+│   ├── components/      # Componentes reutilizables (.astro, .tsx)
+│   ├── content/         # 🦎 ESTE ES TU VAULT DE OBSIDIAN 🦖
+│   │   ├── config.ts    # Configuración de content collections
+│   │   └── vault/       # Tus notas .md van aquí (borra los ejemplos)
+│   │       ├── bibliografía/
+│   │       ├── conceptos/
+│   │       ├── personas/
+│   │       └── etc./
+│   ├── layouts/         # Plantillas de página (.astro)
+│   ├── pages/           # Páginas del sitio (.astro, .md)
+│   ├── plugins/         # Plugins personalizados
+│   ├── scripts/         # Scripts de build
+│   └── styles/          # CSS y estilos
+├── package.json         # Dependencias del proyecto
+├── tsconfig.json        # Configuración de TypeScript
+└── README.md            # Este archivo
+```
+
+### Donde van tus notas de Obsidian
 
 Pon tus archivos `.md` en la carpeta `src/content/`. Podés organizarlos en subcarpetas temáticas:
 - `bibliografía/` - referencias bibliográficas
@@ -110,13 +133,14 @@ Esta plantilla incluye configuración especial para Obsidian:
 
 ## Personalización básica
 
-### Cambiar título del sitio
+### Configurar título, descripción y footer
 
-Edita `src/consts.ts`:
+Edita `src/consts.ts` para personalizar los textos del sitio:
 
 ```typescript
-export const SITE_TITLE = 'Mi Digital Garden';
-export const SITE_DESCRIPTION = 'Mis notas públicas de Obsidian';
+export const SITE_TITLE = 'Ciencia y Música UNTREF';                 // Título que aparece en la pestaña del navegador
+export const SITE_DESCRIPTION = 'Apuntes de la materia CyM UNTREF'; // Descripción del sitio para SEO
+export const FOOTER_TEXT = 'CyM - Ciencia y Música UNTREF 2025';     // Texto que aparece en el footer
 ```
 
 ### Añadir imágenes
